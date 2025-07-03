@@ -30,7 +30,7 @@ async def on_message(message):
         return
 
     if message.content == "hb+add":
-        if not message.channel.permissions_for(message.author).manage_channels:
+        if not message.channel.permissions_for(message.author).manage_channels and not message.guild is None:
             await message.reply(f"yeah ok liberal")
             return
         channelse = openfile()
@@ -41,7 +41,7 @@ async def on_message(message):
         return
 
     if message.content == "hb+rem":
-        if not message.channel.permissions_for(message.author).manage_channels:
+        if not message.channel.permissions_for(message.author).manage_channels and not message.guild is None:
             await message.reply(f"yeah ok liberal")
             return
         channelse = openfile()
